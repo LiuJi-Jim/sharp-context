@@ -7,7 +7,7 @@ Sharp-Context is a C# implementation of Shape Context.
 
 Sharp-Context 是一个 Shape Context 的 C# 实现。
 
-##Dependencies
+###Dependencies
 
   - (Emgu.CV http://www.emgu.com/)
   - (dnAnalytics http://dnanalytics.codeplex.com/)
