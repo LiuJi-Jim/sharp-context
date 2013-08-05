@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71632E85-C440-412A-A573-9801DCBA95C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jim.OCR</RootNamespace>
+    <AssemblyName>Jim.OCR</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dnAnalytics, Version=2009.8.0.0, Culture=neutral, PublicKeyToken=47f8433cf19ffb12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\dnAnalytics.windows.x64\dnAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV, Version=2.1.0.793, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Emgu.CV.2.4\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util, Version=2.1.0.793, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Emgu.CV.2.4\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=47d7877cb3620160">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Emgu.CV\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\KM.cs" />
+    <Compile Include="Algorithms\KMDouble.cs" />
+    <Compile Include="Algorithms\KMeans.cs" />
+    <Compile Include="Algorithms\KMeansClustering.cs" />
+    <Compile Include="Algorithms\Pair.cs" />
+    <Compile Include="Algorithms\ShapeContext.cs" />
+    <Compile Include="Algorithms\Stats.cs" />
+    <Compile Include="Algorithms\Vector2.cs" />
+    <Compile Include="AnnealKMeansClusterDenoise.cs" />
+    <Compile Include="AverageGreyscale.cs" />
+    <Compile Include="ColorDefination.cs" />
+    <Compile Include="Connectivity.cs" />
+    <Compile Include="ContourFinder.cs" />
+    <Compile Include="Denoise\AnnealKMeansConnect.cs" />
+    <Compile Include="Denoise\MidValueFilter.cs" />
+    <Compile Include="Denoise\MidValueJim.cs" />
+    <Compile Include="Denoise\ThresholdConnect.cs" />
+    <Compile Include="GrayLevel.cs" />
+    <Compile Include="Grayscale\GrayscaleConnectLevel.cs" />
+    <Compile Include="HistRound.cs" />
+    <Compile Include="Binarization\MaxVariance.cs" />
+    <Compile Include="Interfaces.cs" />
+    <Compile Include="MaskingSmooth.cs" />
+    <Compile Include="MaxBackgroundBinarization.cs" />
+    <Compile Include="MidValueFilterDenoise.cs" />
+    <Compile Include="GreatestGreyscale.cs" />
+    <Compile Include="IBinarization.cs" />
+    <Compile Include="IDenoise.cs" />
+    <Compile Include="IGreyscale.cs" />
+    <Compile Include="ImageProcessor.cs" />
+    <Compile Include="MaxVarianceBinarization.cs" />
+    <Compile Include="Misc\AutoInvert.cs" />
+    <Compile Include="Misc\Invert.cs" />
+    <Compile Include="Misc\Padding.cs" />
+    <Compile Include="Projecting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recognize\RSCSingle.cs" />
+    <Compile Include="Recognize\SC.cs" />
+    <Compile Include="Recognize\ShapemeSingle.cs" />
+    <Compile Include="RemoveNoiseAreaDenoise.cs" />
+    <Compile Include="ShapeContext2D\Bookstein.cs" />
+    <Compile Include="ShapeContext2D\ComputeSC.cs" />
+    <Compile Include="ShapeContext2D\Dist2.cs" />
+    <Compile Include="ShapeContext2D\Draw.cs" />
+    <Compile Include="ShapeContext2D\HistCost.cs" />
+    <Compile Include="ShapeContext2D\Hungarian.cs" />
+    <Compile Include="ShapeContext2D\Interpolation.cs" />
+    <Compile Include="ShapeContext2D\IterMatchTPS.cs" />
+    <Compile Include="ShapeContext2D\MatchImage.cs" />
+    <Compile Include="ShapeContext2D\MatrixUtils.cs" />
+    <Compile Include="ShapeContext2D\ShapeContext.cs" />
+    <Compile Include="ShapeContext2D\Transformation.cs" />
+    <Compile Include="SimplestBinarization.cs" />
+    <Compile Include="Smooth\Mask.cs" />
+    <Compile Include="Split\Average.cs" />
+    <Compile Include="Split\Connect.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="WeightedAverageGreyscale.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
